@@ -98,13 +98,14 @@ body{
     color: white;
     border-radius: 30px;
     text-align: center;
+    cursor: pointer;
 }
 
 .catagories p:hover{
     color: black;
     background-color: transparent;
     border: #892DE1 solid 1px;
-    transition: 1s;
+    transition: 2s;
 }
 
 /* Sale Image */
@@ -122,11 +123,36 @@ body{
     top: 140px;
     left: 100px;
     border: #892DE1 solid 5px;
+    animation-name: zoom;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
     
 }
 
 .sale-img img{
     width: 100%;
+  
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+        opacity: 0;
+        animation-duration: 2s;
+    }
+
+    50%{
+         transform: scale(0.5);
+         opacity: 0.5;
+         animation-duration: 2s;
+    }
+
+    100%{
+         transform: scale(1);
+        opacity: 1;
+        animation-duration: 2s;
+    }
 }
 
 /* Recommended */
